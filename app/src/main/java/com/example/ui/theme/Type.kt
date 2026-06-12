@@ -9,6 +9,9 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
+import androidx.compose.ui.text.font.Font
+import com.example.R
+
 // High contrast drop shadow to give text a crisp black outline and premium dimensional effect
 val HomaTextShadow = Shadow(
     color = Color(0xC0000000), // Rich dark black shadow outline
@@ -16,8 +19,10 @@ val HomaTextShadow = Shadow(
     blurRadius = 4f
 )
 
-// Standard Persian font fallbacks
-val PersianFontFamily = FontFamily.SansSerif
+// Loaded premium Farsi typography font
+val PersianFontFamily = FontFamily(
+    Font(R.font.bhoma, FontWeight.Normal)
+)
 
 val Typography = Typography(
     displayLarge = TextStyle(

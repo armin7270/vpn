@@ -381,6 +381,14 @@ fun DashboardScreen(
 ) {
     val context = LocalContext.current
 
+    val vpnPrepareLauncher = androidx.activity.compose.rememberLauncherForActivityResult(
+        contract = androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == android.app.Activity.RESULT_OK) {
+            viewModel.toggleVpnConnection(context)
+        }
+    }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -393,7 +401,19 @@ fun DashboardScreen(
         ConnectionGlowButton(
             isConnected = vpnState.state == ConnectionState.CONNECTED,
             isConnecting = vpnState.state == ConnectionState.CONNECTING || vpnState.state == ConnectionState.RECONNECTING,
-            onClick = { viewModel.toggleVpnConnection(context) }
+            onClick = {
+                val currentState = vpnState.state
+                if (currentState == ConnectionState.CONNECTED || currentState == ConnectionState.CONNECTING || currentState == ConnectionState.RECONNECTING) {
+                    viewModel.toggleVpnConnection(context)
+                } else {
+                    val intent = android.net.VpnService.prepare(context)
+                    if (intent != null) {
+                        vpnPrepareLauncher.launch(intent)
+                    } else {
+                        viewModel.toggleVpnConnection(context)
+                    }
+                }
+            }
         )
 
         Spacer(modifier = Modifier.height(4.dp))

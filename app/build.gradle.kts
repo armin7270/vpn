@@ -1,4 +1,7 @@
 import java.net.URL
+import javax.net.ssl.*
+import java.security.SecureRandom
+import java.security.cert.X509Certificate
 
 plugins {
   alias(libs.plugins.android.application)
@@ -131,9 +134,9 @@ tasks.register("downloadHomaFont") {
         }
         val destFile = file("src/main/res/font/bhoma.ttf")
         if (!destFile.exists()) {
-            println("Downloading B Homa font from GitHub...")
+            println("Downloading Persian Vazir font from jsDelivr CDN...")
             try {
-                val urlObj = URL("https://raw.githubusercontent.com/shariati/farsi-css-fonts/master/dist/fonts/BHoma.ttf")
+                val urlObj = URL("https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font/dist/Vazir.ttf")
                 val connection = urlObj.openConnection()
                 connection.setRequestProperty("User-Agent", "Mozilla/5.0")
                 connection.connect()
@@ -142,9 +145,10 @@ tasks.register("downloadHomaFont") {
                         input.copyTo(output)
                     }
                 }
-                println("B Homa font downloaded successfully!")
+                println("Persian Vazir font downloaded successfully as bhoma.ttf!")
             } catch (e: Exception) {
-                println("Error downloading B Homa font: ${e.message}")
+                println("Error downloading Persian font: ${e.toString()}")
+                e.stackTrace.take(10).forEach { println("   at $it") }
             }
         }
     }
