@@ -381,12 +381,17 @@ fun DashboardScreen(
 ) {
     val context = LocalContext.current
 
-    val vpnPrepareLauncher = androidx.activity.compose.rememberLauncherForActivityResult(
-        contract = androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult()
-    ) { result ->
-        if (result.resultCode == android.app.Activity.RESULT_OK) {
-            viewModel.toggleVpnConnection(context)
+    val mainActivity = remember(context) {
+        var ctx = context
+        var result: com.example.MainActivity? = null
+        while (ctx is android.content.ContextWrapper) {
+            if (ctx is com.example.MainActivity) {
+                result = ctx
+                break
+            }
+            ctx = ctx.baseContext
         }
+        result
     }
 
     Column(
@@ -406,9 +411,8 @@ fun DashboardScreen(
                 if (currentState == ConnectionState.CONNECTED || currentState == ConnectionState.CONNECTING || currentState == ConnectionState.RECONNECTING) {
                     viewModel.toggleVpnConnection(context)
                 } else {
-                    val intent = android.net.VpnService.prepare(context)
-                    if (intent != null) {
-                        vpnPrepareLauncher.launch(intent)
+                    if (mainActivity != null) {
+                        mainActivity.startVpnPreparation()
                     } else {
                         viewModel.toggleVpnConnection(context)
                     }

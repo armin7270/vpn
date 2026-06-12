@@ -38,4 +38,7 @@
     <string name="theme_light">Light Mode</string>
     <string name="theme_dark">Dark Mode</string>
     <string name="theme_desc">Toggle between Light and Dark visual skins.</string>
+    <string name="vpn_permission_denied_title">VPN Connection Permission Required</string>
+    <string name="vpn_permission_denied_desc">Aero VPN requires a secure system permission to establish a local virtual interface. This allows us to forward your data safely to the encrypted VPN nodes. Without this permission, the app is unable to start the service.</string>
+    <string name="vpn_permission_denied_ok">Understood</string>
 </resources>

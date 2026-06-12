@@ -21,7 +21,11 @@ class GreetingScreenshotTest {
 
   @Test
   fun greeting_screenshot() {
-    composeTestRule.setContent { MyApplicationTheme { Greeting("Robolectric") } }
+    composeTestRule.setContent { 
+        MyApplicationTheme(darkTheme = false) { 
+            androidx.compose.material3.Text("Aero VPN") 
+        } 
+    }
 
     composeTestRule.onRoot().captureRoboImage(filePath = "src/test/screenshots/greeting.png")
   }
