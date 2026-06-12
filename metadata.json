@@ -1,0 +1,6 @@
+{
+  "name": "TipsTopNetwork vpn",
+  "description": "Premium glassmorphism VPN client supporting Xray configurations (VLESS, VMess, Trojan, Reality) with advanced DNS, split tunneling, and full RTL layout support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

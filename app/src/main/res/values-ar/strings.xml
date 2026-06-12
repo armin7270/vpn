@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">آيرون في بي إن</string>
+    <string name="status_disconnected">غير متصل</string>
+    <string name="status_connecting">جاري الاتصال...</string>
+    <string name="status_connected">متصل بأمان</string>
+    <string name="status_reconnecting">إعادة الاتصال...</string>
+    <string name="connect">انقر للاتصال</string>
+    <string name="disconnect">قطع الاتصال</string>
+    <string name="home">الرئيسية</string>
+    <string name="servers">الخوادم</string>
+    <string name="subscriptions">الاشتراكات</string>
+    <string name="settings">الإعدادات</string>
+    <string name="upload">رفع</string>
+    <string name="download">تنزيل</string>
+    <string name="ping">سرعة الاستجابة</string>
+    <string name="traffic_used">الاستخدام اليومي</string>
+    <string name="auto_select">اتصال تلقائي بالأسرع</string>
+    <string name="add_server">إضافة خادم</string>
+    <string name="unsupported_qr">الرمز أو الرابط غير صالح</string>
+    <string name="import_success">تم استيراد الخادم بنجاح</string>
+    <string name="import_failed">فشل الاستيراد</string>
+    <string name="split_tunneling">نفق مخصص للتطبيقات</string>
+    <string name="doh_dns">خادم الـ DNS الآمن (DoH)</string>
+    <string name="search_apps">البحث في التطبيقات...</string>
+    <string name="update_sub">تحديث الكل</string>
+    <string name="last_updated">تحديث: %s</string>
+    <string name="subscription_url">https://example.com/sub</string>
+    <string name="add_subscription">إضافة رابط اشتراك</string>
+    <string name="protocol">البروتوكول</string>
+    <string name="server_address">عنوان الخادم</string>
+    <string name="port">المنفذ</string>
+    <string name="security">التشفير / الأمان</string>
+    <string name="import_qr">استيراد من QR أو رابط</string>
+    <string name="theme_mode">مظهر التطبيق</string>
+    <string name="bypassed_apps">تطبيقات مستثناة</string>
+    <string name="dns_placeholder">https://dns.cloudflare.com/dns-query</string>
+</resources>

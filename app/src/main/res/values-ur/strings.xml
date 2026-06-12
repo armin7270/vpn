@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">ایرو وی پی این</string>
+    <string name="status_disconnected">منقطع</string>
+    <string name="status_connecting">منسلک ہو رہا ہے...</string>
+    <string name="status_connected">محفوظ کنکشن</string>
+    <string name="status_reconnecting">دوبارہ کوشش...</string>
+    <string name="connect">جڑنے کے لیے تھپتھپائیں</string>
+    <string name="disconnect">منقطع کریں</string>
+    <string name="home">ڈیش بورڈ</string>
+    <string name="servers">سرورز</string>
+    <string name="subscriptions">سبسکرپشنز</string>
+    <string name="settings">ترجیحات</string>
+    <string name="upload">اپ لوڈ</string>
+    <string name="download">ڈاؤن لوڈ</string>
+    <string name="ping">تاخیر (پنگ)</string>
+    <string name="traffic_used">روزانہ استعمال</string>
+    <string name="auto_select">خودکار انتخاب (تیز ترین)</string>
+    <string name="add_server">نیا سرور شامل کریں</string>
+    <string name="unsupported_qr">غیر معتبر لنک یا کیو آر کوڈ</string>
+    <string name="import_success">سرور کامیابی سے درآمد ہو گیا</string>
+    <string name="import_failed">درآمد ناکام رہی</string>
+    <string name="split_tunneling">اسپلٹ ٹنلنگ (ایپس)</string>
+    <string name="doh_dns">محفوظ DNS (DoH)</string>
+    <string name="search_apps">ایپلی کیشنز تلاش کریں...</string>
+    <string name="update_sub">سب کو اپ ڈیٹ کریں</string>
+    <string name="last_updated">اپ ڈیٹ: %s</string>
+    <string name="subscription_url">https://example.com/sub</string>
+    <string name="add_subscription">سبسکرپشن لنک شامل کریں</string>
+    <string name="protocol">پروٹوکول</string>
+    <string name="server_address">سرور ایڈریس</string>
+    <string name="port">پورٹ نمبر</string>
+    <string name="security">سیکیورٹی اور انکرپشن</string>
+    <string name="import_qr">QR کواڈ یا لنک درآمد کریں</string>
+    <string name="theme_mode">ایپلی کیشن کا انداز</string>
+    <string name="bypassed_apps">بائی پاس کردہ ایپس</string>
+    <string name="dns_placeholder">https://dns.cloudflare.com/dns-query</string>
+</resources>
